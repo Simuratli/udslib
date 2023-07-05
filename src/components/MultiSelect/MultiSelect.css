@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.multiselect{
+    background-color: white;
+    width: max-content;
+}
+
+
+
+.multiselect__header{
+    border: 1px solid #D8D8D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+    min-height: 40px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.multiselect.responsive .multiselect__header{
+    width: 100%;
+}
+
+.multiselect__header:hover{
+    background-color: #e1dfdf;
+}
+
+.multiselect__content{
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0px 8px 24px 0px rgba(14, 31, 53, 0.08), 0px 6px 12px 0px rgba(14, 31, 53, 0.12), 0px 3px 6px 0px rgba(14, 31, 53, 0.08);
+    transition: 0.2s;
+}
+
+.multiselect__content.open{
+    max-height: 200px;
+    overflow: auto;
+    transition: 0.1s;
+}
+
+.multiselect__content__element{
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.multiselect__content__element.selected{
+    background-color: #d4e1e2;
+}
+
+.multiselect__content__element:hover{
+    background-color: #e1dfdf;
+}
+
+
+.multiselect__content::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.multiselect__content::-webkit-scrollbar-track {
+    background: rgb(251, 248, 248);
+  }
+  
+.multiselect__content::-webkit-scrollbar-thumb {
+    background: #e1dfdf;
+  }
+
+  .multiselect__selected__options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .multiselect__badge{
+    font-size: 12px;
+    background-color: rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 2px 5px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .multiselect__badge__cancel{
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+  }

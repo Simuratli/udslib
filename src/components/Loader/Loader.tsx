@@ -20,6 +20,17 @@ const LoaderComponent = styled.div<LoaderComp>`
   background: rgba(255, 255, 255, 0.8);
   z-index: 100000;
 
+  .percentage{
+    text-align: center;
+    font-size: 38px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom:10px;
+    color:#1a4f95;
+  }
+  
   .container {
     width: 112px;
     height: 112px;
@@ -265,10 +276,15 @@ const animationConfig = {
   delay: '0s',
 };
 
-function Loader() {
+export interface LoaderPropTypes{
+  percentage?:number;
+}
+
+function Loader({percentage}:LoaderPropTypes) {
   return (
     <LoaderComponent animationConfig={animationConfig} scrollY={window.screenX}>
       <div className='container'>
+        {percentage && <h1 className='percentage'>{percentage}%</h1>}
         <div className='box1' />
         <div className='box2' />
         <div className='box3' />

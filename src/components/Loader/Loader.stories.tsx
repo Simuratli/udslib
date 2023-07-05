@@ -7,6 +7,9 @@ export default {
   component: Loader,
 } as ComponentMeta<typeof Loader>;
 
-const Template: ComponentStory<typeof Loader> = () => <Loader />;
+const Template: ComponentStory<typeof Loader> = (arg) => <Loader {...arg}/>;
 
-export const Home = Template.bind({});
+export const Simple = Template.bind({});
+
+export const Percentage = Template.bind({});
+Percentage.args = { percentage: 50,};

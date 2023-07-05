@@ -16,3 +16,9 @@ Home.args = { name:"home" };
 
 export const Smile = Template.bind({});
 Smile.args = { name:"smile" };
+
+export const Dropdown = Template.bind({});
+Dropdown.args = { name:"dropdown" };
+
+export const Cancel = Template.bind({});
+Cancel.args = { name:"cancel" };

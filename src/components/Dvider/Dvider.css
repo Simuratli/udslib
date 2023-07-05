@@ -1,0 +1,52 @@
+.dvider{
+   display: block;
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.dvider__left{
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid gray;
+}
+
+.dvider__text{
+    margin: 0 5px;
+    color: gray;
+    font-family: sans-serif;
+}
+
+.dvider__right{
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid gray;
+}
+
+
+.dvider.dashed .dvider__right{
+    border-bottom-style: dashed ;
+}
+
+.dvider.dashed .dvider__left {
+    border-bottom-style: dashed ;
+}
+
+
+.dvider.left .dvider__left{
+    width: 5%;
+}
+
+.dvider.right .dvider__right{
+    width: 5%;
+}
+
+
+.dvider.vertical{
+    height: 100%;
+    width: 1px;
+    border: none;
+    border-right: 1px solid gray;
+}

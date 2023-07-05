@@ -19,9 +19,21 @@ export function Smile() {
     </svg>
 }
 
+export function Dropdown() {
+    return <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fillRule="evenodd" clipRule="evenodd" d="M2.50411 4.8376C2.73191 4.6098 3.10126 4.6098 3.32906 4.8376L6.99992 8.50846L10.6708 4.8376C10.8986 4.6098 11.2679 4.6098 11.4957 4.8376C11.7235 5.06541 11.7235 5.43475 11.4957 5.66256L7.4124 9.74589C7.18459 9.9737 6.81524 9.9737 6.58744 9.74589L2.50411 5.66256C2.2763 5.43475 2.2763 5.06541 2.50411 4.8376Z" fill="#6E6F77"/>
+    </svg>
+}
+
+
+export function Cancel() {
+    return <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+}
+
+
 
 export interface IcoPropTypes{
-    name:'home' | 'smile'
+    name:'home' | 'smile' | 'dropdown' | 'cancel'
 }
 
 
@@ -31,6 +43,10 @@ export default function Icon({name}:IcoPropTypes) {
             return <Home/>
         case 'smile':
             return <Smile/>
+        case 'dropdown':
+            return <Dropdown/>
+        case 'cancel':
+            return <Cancel/>
         default:
             return <Home/>
     }
